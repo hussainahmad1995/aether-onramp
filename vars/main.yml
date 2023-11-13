@@ -15,7 +15,7 @@ core:
   standalone: "true"
   data_iface: eno1
   values_file: "deps/5gc/roles/core/templates/sdcore-5g-values.yaml"
-  ran_subnet: "172.20.0.0/16"
+  ran_subnet: ""
   helm:
     chart_ref: aether/sd-core
     chart_version: 0.12.8
