@@ -1,0 +1,1078 @@
+configuration:
+  amfDBName: sdcore_amf
+  amfName: AMF
+  debugProfilePort: 5001
+  enableDBStore: false
+  enableNrfCaching: false
+  enableSctpLb: false
+  kafkaInfo:
+    brokerPort: 9092
+    brokerUri: kafka-headless
+    topicName: sdcore-data-source-amf
+  mongodb:
+    name: free5gc
+    url: mongodb://mongodb-arbiter-headless
+  networkFeatureSupport5GS:
+    emc: 0
+    emcN3: 0
+    emf: 0
+    enable: true
+    imsVoPS: 0
+    iwkN26: 0
+    mcsi: 0
+    mpsi: 0
+  networkName:
+    full: Aether5G
+    short: Aether
+  nfKafka:
+    enable: true
+    topic: sdcore-nf-data-source
+    urls:
+    - kafka-headless:9092
+  ngapIpList:
+  - 0.0.0.0
+  ngappPort: 38412
+  non3gppDeregistrationTimerValue: 3240
+  nrfUri: http://nrf:29510
+  plmnSupportList:
+  - plmnId:
+      mcc: "208"
+      mnc: "93"
+    snssaiList:
+    - sd: "010203"
+      sst: 1
+  sbi:
+    bindingIPv4: 0.0.0.0
+    port: 29518
+    registerIPv4: amf
+    scheme: http
+  sctpGrpcPort: 9000
+  security:
+    cipheringOrder:
+    - NEA0
+    integrityOrder:
+    - NIA1
+    - NIA2
+  servedGuamiList:
+  - amfId: cafe00
+    plmnId:
+      mcc: "208"
+      mnc: "93"
+  serviceNameList:
+  - namf-comm
+  - namf-evts
+  - namf-mt
+  - namf-loc
+  - namf-oam
+  supportDnnList:
+  - internet
+  supportTaiList:
+  - plmnId:
+      mcc: "208"
+      mnc: "93"
+    tac: 1
+  t3502Value: 720
+  t3512Value: 3600
+  t3513:
+    enable: true
+    expireTime: 6s
+    maxRetryTimes: 4
+  t3522:
+    enable: true
+    expireTime: 6s
+    maxRetryTimes: 4
+  t3550:
+    enable: true
+    expireTime: 6s
+    maxRetryTimes: 4
+  t3560:
+    enable: true
+    expireTime: 6s
+    maxRetryTimes: 4
+  t3565:
+    enable: true
+    expireTime: 6s
+    maxRetryTimes: 4
+info:
+  description: AMF initial configuration
+  version: 1.0.0
+logger:
+  AMF:
+    ReportCaller: false
+    debugLevel: info
+  AUSF:
+    ReportCaller: false
+    debugLevel: info
+  Aper:
+    ReportCaller: false
+    debugLevel: info
+  CommonConsumerTest:
+    ReportCaller: false
+    debugLevel: info
+  FSM:
+    ReportCaller: false
+    debugLevel: info
+  MongoDBLibrary:
+    ReportCaller: false
+    debugLevel: info
+  N3IWF:
+    ReportCaller: false
+    debugLevel: info
+  NAS:
+    ReportCaller: false
+    debugLevel: info
+  NGAP:
+    ReportCaller: false
+    debugLevel: info
+  NRF:
+    ReportCaller: false
+    debugLevel: info
+  NamfComm:
+    ReportCaller: false
+    debugLevel: info
+  NamfEventExposure:
+    ReportCaller: false
+    debugLevel: info
+  NsmfPDUSession:
+    ReportCaller: false
+    debugLevel: info
+  NudrDataRepository:
+    ReportCaller: false
+    debugLevel: info
+  OpenApi:
+    ReportCaller: false
+    debugLevel: info
+  PCF:
+    ReportCaller: false
+    debugLevel: info
+  PFCP:
+    ReportCaller: false
+    debugLevel: info
+  PathUtil:
+    ReportCaller: false
+    debugLevel: info
+  SMF:
+    ReportCaller: false
+    debugLevel: info
+  UDM:
+    ReportCaller: false
+    debugLevel: info
+  UDR:
+    ReportCaller: false
+    debugLevel: info
+  WEBUI:
+    ReportCaller: false
+    debugLevel: info2023-11-26T23:42:23Z[36m [INFO][AMF][App] [0mamf
+2023-11-26T23:42:23Z[36m [INFO][AMF][Init] [0mAMF Log level is set to [info] level
+2023-11-26T23:42:23Z[36m [INFO][LIB][NAS] [0mset log level : info
+2023-11-26T23:42:23Z[36m [INFO][LIB][NAS] [0mset report call : false
+2023-11-26T23:42:23Z[36m [INFO][LIB][NGAP] [0mset log level : info
+2023-11-26T23:42:23Z[36m [INFO][LIB][NGAP] [0mset report call : false
+2023-11-26T23:42:23Z[36m [INFO][LIB][FSM] [0mset log level : info
+2023-11-26T23:42:23Z[36m [INFO][LIB][FSM] [0mset report call : false
+2023-11-26T23:42:23Z[36m [INFO][LIB][Aper] [0mset log level : info
+2023-11-26T23:42:23Z[36m [INFO][LIB][Aper] [0mset report call : false
+2023-11-26T23:42:23Z[36m [INFO][LIB][Path] [0mset log level : info
+2023-11-26T23:42:23Z[36m [INFO][LIB][Path] [0mset report call : false
+2023-11-26T23:42:23Z[36m [INFO][AMF][CFG] [0mconfig version [1.0.0]
+2023-11-26T23:42:23Z[36m [INFO][AMF][Init] [0mReading Amf related configuration from ROC
+2023-11-26T23:42:23Z[36m [INFO][Config5g][GRPC] [0mcreate config client
+2023-11-26T23:42:23Z[36m [INFO][Config5g][GRPC] [0mDial grpc connection -  webui:9876
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Channel created
+2023/11/26 23:42:23 INFO: [core] [Channel #1] original dial target is: "webui:9876"
+2023/11/26 23:42:23 INFO: [core] [Channel #1] parsed dial target is: {Scheme:webui Authority: Endpoint:9876 URL:{Scheme:webui Opaque:9876 User: Host: Path: RawPath: ForceQuery:false RawQuery: Fragment: RawFragment:}}
+2023/11/26 23:42:23 INFO: [core] [Channel #1] fallback to scheme "passthrough"
+2023/11/26 23:42:23 INFO: [core] [Channel #1] parsed dial target is: {Scheme:passthrough Authority: Endpoint:webui:9876 URL:{Scheme:passthrough Opaque: User: Host: Path:/webui:9876 RawPath: ForceQuery:false RawQuery: Fragment: RawFragment:}}
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Channel authority set to "webui:9876"
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "webui:9876",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Type": 0,
+      "Metadata": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Channel switches to new LB policy "pick_first"
+2023/11/26 23:42:23 INFO: [core] [Channel #1 SubChannel #2] Subchannel created
+2023-11-26T23:42:23Z[36m [INFO][AMF][Init] [0mServer started
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2023/11/26 23:42:23 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:23 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+[GIN-debug] GET    /namf-callback/v1/        --> github.com/omec-project/amf/httpcallback.Index (4 handlers)
+[GIN-debug] POST   /namf-callback/v1/smContextStatus/:guti/:pduSessionId --> github.com/omec-project/amf/httpcallback.HTTPSmContextStatusNotify (4 handlers)
+[GIN-debug] POST   /namf-callback/v1/am-policy/:polAssoId/update --> github.com/omec-project/amf/httpcallback.HTTPAmPolicyControlUpdateNotifyUpdate (4 handlers)
+2023-11-26T23:42:23Z[36m [INFO][Config5g][GRPC] [0msubscribeToConfigPod
+[GIN-debug] POST   /namf-callback/v1/am-policy/:polAssoId/terminate --> github.com/omec-project/amf/httpcallback.HTTPAmPolicyControlUpdateNotifyTerminate (4 handlers)
+[GIN-debug] POST   /namf-callback/v1/n1-message-notify --> github.com/omec-project/amf/httpcallback.HTTPN1MessageNotify (4 handlers)
+[GIN-debug] POST   /namf-callback/v1/nf-status-notify --> github.com/omec-project/amf/httpcallback.HTTPNfSubscriptionStatusNotify (4 handlers)
+[GIN-debug] GET    /namf-oam/v1/             --> github.com/omec-project/amf/oam.Index (4 handlers)
+[GIN-debug] GET    /namf-oam/v1/registered-ue-context --> github.com/omec-project/amf/oam.HTTPRegisteredUEContext (4 handlers)
+[GIN-debug] GET    /namf-oam/v1/registered-ue-context/:supi --> github.com/omec-project/amf/oam.HTTPRegisteredUEContext (4 handlers)
+[GIN-debug] DELETE /namf-oam/v1/purge-ue-context/:supi --> github.com/omec-project/amf/oam.HTTPPurgeUEContext (4 handlers)
+2023-11-26T23:42:23Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+[GIN-debug] GET    /namf-oam/v1/active-ues   --> github.com/omec-project/amf/oam.HTTPGetActiveUes (4 handlers)
+[GIN-debug] POST   /namf-oam/v1/amfInstanceDown/:nfid --> github.com/omec-project/amf/oam.HTTPAmfInstanceDown (4 handlers)
+[GIN-debug] GET    /namf-comm/v1/            --> github.com/omec-project/amf/communication.Index (4 handlers)
+2023-11-26T23:42:23Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+[GIN-debug] PUT    /namf-comm/v1/subscriptions/:subscriptionId --> github.com/omec-project/amf/communication.HTTPAMFStatusChangeSubscribeModify (4 handlers)
+[GIN-debug] DELETE /namf-comm/v1/subscriptions/:subscriptionId --> github.com/omec-project/amf/communication.HTTPAMFStatusChangeUnSubscribe (4 handlers)
+2023/11/26 23:42:23 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+[GIN-debug] PUT    /namf-comm/v1/ue-contexts/:ueContextId --> github.com/omec-project/amf/communication.HTTPCreateUEContext (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/assign-ebi --> github.com/omec-project/amf/communication.HTTPEBIAssignment (4 handlers)
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/transfer-update --> github.com/omec-project/amf/communication.HTTPRegistrationStatusUpdate (4 handlers)
+2023-11-26T23:42:23Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/release --> github.com/omec-project/amf/communication.HTTPReleaseUEContext (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/transfer --> github.com/omec-project/amf/communication.HTTPUEContextTransfer (4 handlers)
+[GIN-debug] DELETE /namf-comm/v1/ue-contexts/:ueContextId/n1-n2-messages/subscriptions/:subscriptionId --> github.com/omec-project/amf/communication.HTTPN1N2MessageUnSubscribe (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/n1-n2-messages --> github.com/omec-project/amf/communication.HTTPN1N2MessageTransfer (4 handlers)
+[GIN-debug] GET    /namf-comm/v1/ue-contexts/:ueContextId/n1-n2-messages/:n1N2MessageId --> github.com/omec-project/amf/communication.HTTPN1N2MessageTransferStatus (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/ue-contexts/:ueContextId/n1-n2-messages/subscriptions --> github.com/omec-project/amf/communication.HTTPN1N2MessageSubscribe (4 handlers)
+[GIN-debug] DELETE /namf-comm/v1/non-ue-n2-messages/subscriptions/:n2NotifySubscriptionId --> github.com/omec-project/amf/communication.HTTPNonUeN2InfoUnSubscribe (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/non-ue-n2-messages/transfer --> github.com/omec-project/amf/communication.HTTPNonUeN2MessageTransfer (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/non-ue-n2-messages/subscriptions --> github.com/omec-project/amf/communication.HTTPNonUeN2InfoSubscribe (4 handlers)
+[GIN-debug] POST   /namf-comm/v1/subscriptions --> github.com/omec-project/amf/communication.HTTPAMFStatusChangeSubscribe (4 handlers)
+[GIN-debug] GET    /namf-evts/v1/            --> github.com/omec-project/amf/eventexposure.Index (4 handlers)
+[GIN-debug] DELETE /namf-evts/v1/subscriptions/:subscriptionId --> github.com/omec-project/amf/eventexposure.HTTPDeleteSubscription (4 handlers)
+[GIN-debug] PATCH  /namf-evts/v1/subscriptions/:subscriptionId --> github.com/omec-project/amf/eventexposure.HTTPModifySubscription (4 handlers)
+[GIN-debug] POST   /namf-evts/v1/subscriptions --> github.com/omec-project/amf/eventexposure.HTTPCreateSubscription (4 handlers)
+[GIN-debug] GET    /namf-mt/v1/              --> github.com/omec-project/amf/mt.Index (4 handlers)
+[GIN-debug] GET    /namf-mt/v1/ue-contexts/:ueContextId --> github.com/omec-project/amf/mt.HTTPProvideDomainSelectionInfo (4 handlers)
+[GIN-debug] POST   /namf-mt/v1/ue-contexts/:ueContextId/ue-reachind --> github.com/omec-project/amf/mt.HTTPEnableUeReachability (4 handlers)
+[GIN-debug] GET    /namf-loc/v1/             --> github.com/omec-project/amf/location.Index (4 handlers)
+[GIN-debug] POST   /namf-loc/v1/:ueContextId/provide-loc-info --> github.com/omec-project/amf/location.HTTPProvideLocationInfo (4 handlers)
+[GIN-debug] POST   /namf-loc/v1/:ueContextId/provide-pos-info --> github.com/omec-project/amf/location.HTTPProvidePositioningInfo (4 handlers)
+2023-11-26T23:42:23Z[36m [INFO][AMF][Util] [0mamfconfig Info: Version[1.0.0] Description[AMF initial configuration]
+2023-11-26T23:42:23Z[36m [INFO][AMF][Util] [0mNfId Instance: fec017c8-d87f-4261-83d8-cd467d6a22cb
+2023-11-26T23:42:23Z[37m [DEBU][DRSM][App] [0mCLIENT ID:  {amf-5887bbf6c5-gtqb6 fec017c8-d87f-4261-83d8-cd467d6a22cb 10.42.0.22}
+2023-11-26T23:42:23Z[37m [DEBU][DRSM][App] [0mdrsm mode set to  0
+2023/11/26 23:42:23 ChunkId in the range of 0 to 16384 
+2023-11-26T23:42:23Z[37m [DEBU][DRSM][App] [0mipmodule  &{24 0 <nil> map[]}
+2023/11/26 23:42:23 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:23 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:23 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:23 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:24 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:24 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:24 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:24Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:24Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:24 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:24Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:24 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023/11/26 23:42:24 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:24 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:24Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:24 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:24 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:24 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:24 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:25 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:25 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:25 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:25 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:25 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:25 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:25Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:25 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:25 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:25 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:25 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:25 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:26 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:26 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:26 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:26 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:26 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:26 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:26 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:26Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:26 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:26 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:26 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:26 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:27 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:27 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:27 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:27 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:27 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:27 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:27 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:27Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:27 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:27 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:27 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:27 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:28 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:28 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:28 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:28 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:28 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:28 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:28 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:28Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:28 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:28 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:28 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:28 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:29 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:29 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:29 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:29 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:29 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:29 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:29Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:29 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:29 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:29 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:29 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:29 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:30 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:30 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:30 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:30Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:30Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:30 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:30Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:30 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:30Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:30 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:30 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:30Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:30 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:30 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:30 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:30 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:31 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:31 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:31 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:31 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:31 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:31 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:31Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:31 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:31 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:31 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:31 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:31 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:32 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:32 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:32 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:32 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:32 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:32 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:32Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:32 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:32 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:32 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:32 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:32 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:33 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:33 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:33 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:33 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:33 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:33 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:33 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:33Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:33 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:33 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:33 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:33 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:34 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:34 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:34 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:34Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:34Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:34 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:34 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:34Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:34 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:34 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:34Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:34 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:34 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:34 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:34 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:35 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:35 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:35 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:35 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:35 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:35 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:35 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:35Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:35 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:35 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:35 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:35 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:36 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:36 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:36 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:36Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:36Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:36 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:36 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:36Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:36 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:36Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:36 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:36 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:36 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:36 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:36 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:37 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:37 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:37 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:37 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:37 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:37 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:37 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:37Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:37 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:37 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:37 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:37 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:38 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:38 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:38 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:38Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:38Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:38 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:38Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:38 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:38Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:38 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:39 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:39Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:39 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:39 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:39 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:39 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:40 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:40 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:40 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:40 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:40 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:40 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:40Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:40 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:40 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:40 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:40 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:40 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:41 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:41 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:41 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:41Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:41Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:41Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:41 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:41 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:41Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:41 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:41 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:41Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:41 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:41 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:41 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:41 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:42 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:42 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:42 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:42Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:42Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:42Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:42 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:42 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:42Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:42 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:42 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:42Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:42 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:42 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:42 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:42 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:43 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:43 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:43 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:43 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:43 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:43 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:43Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:43 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:43 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:43 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:43 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:43 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:44 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:44 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:44 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:44 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:44 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:44 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:44 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:44Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:44 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:44 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:44 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:44 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:45 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:45 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:45 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:45 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:45 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:45 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:45 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:45Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:45 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:45 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:45 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:45 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:46 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:46 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:46 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:46Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:46Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:46 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:46Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:46 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023/11/26 23:42:46 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:46 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:46Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:46 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:46 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:46 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:46 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:47Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:47 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:47 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:47 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:47 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:49 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:49 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:49 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:49 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:49 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:49 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:49 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:49Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:49 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:49 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:49 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:49 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:50 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:50 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:50 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:50 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:50 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:50 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:50Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:50 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:50 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:50 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:50 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:50 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:51 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:51 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:51 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:51Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:51Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:51 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:51 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:51Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:51 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:51 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:51Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:51 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:51 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:51 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:51 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:52 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:52 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:52 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:52Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:52Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:52 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:52Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:52 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:52Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:52 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:52 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:52Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:52 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:52 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:52 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:52 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0mipmodule  &{{0 0} 0xc000444020}
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0mip module prefix  map[]
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0mSetMongoDB done  sdcore_amf
+Started Pod Down goroutine
+2023-11-26T23:42:52Z[36m [INFO][AMF][Context] [0mMondbName: sdcore_amf, Url: mongodb://mongodb-arbiter-headless
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0mdocument expiry enabled
+2023-11-26T23:42:52Z[36m [INFO][AMF][Context] [0mSuccessfully connected to Mongodb
+2023-11-26T23:42:52Z[36m [INFO][AMF][NGAP] [0mListen on 127.0.0.1/[::1%lo]/[fe80::c43d:49ff:feff:5580%eth0]/10.42.0.22:38412
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0miterate change stream for podData  &{{0 0} amfid {amf-5887bbf6c5-gtqb6 fec017c8-d87f-4261-83d8-cd467d6a22cb 10.42.0.22} {mongodb://mongodb-arbiter-headless sdcore_amf} 0 24 map[] map[] map[] 0xc0003fd320 map[] 16384 <nil> 0xc000a24090 map[] 0xc0006682d0}
+2023-11-26T23:42:52Z[37m [DEBU][DRSM][App] [0mTTL Index created for Field : expireAt in Collection
+2023-11-26T23:42:52Z[36m [INFO][LIB][MonDB] [0mCreated index :  supi_1  on keyField :  supi  for Collection :  amf.data.amfState
+2023-11-26T23:42:52Z[36m [INFO][LIB][MonDB] [0mCreated index :  guti_1  on keyField :  guti  for Collection :  amf.data.amfState
+2023-11-26T23:42:52Z[36m [INFO][LIB][MonDB] [0mCreated index :  tmsi_1  on keyField :  tmsi  for Collection :  amf.data.amfState
+2023/11/26 23:42:53 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:53 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:53 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:53 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:53 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:53 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:53 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:53Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:53 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:53 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:53 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:53 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023-11-26T23:42:53Z[36m [INFO][AMF][NGAP] [0m[AMF] SCTP Accept from: 128.84.155.135:20125
+2023/11/26 23:42:54 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:54 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:54 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:54Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:54Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:54Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:54 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:54 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023/11/26 23:42:54 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023/11/26 23:42:54 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023-11-26T23:42:54Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:54 WARNING: [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+  "Addr": "webui:9876",
+  "ServerName": "webui:9876",
+  "Attributes": null,
+  "BalancerAttributes": null,
+  "Type": 0,
+  "Metadata": null
+}. Err: connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"
+2023/11/26 23:42:54 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:54 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {TRANSIENT_FAILURE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:54 INFO: [core] [Channel #1] Channel Connectivity change to TRANSIENT_FAILURE
+2023/11/26 23:42:55 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to IDLE
+2023/11/26 23:42:55 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {IDLE connection error: desc = "transport: Error while dialing dial tcp 10.42.247.119:9876: connect: connection refused"}
+2023/11/26 23:42:55 INFO: [core] [Channel #1] Channel Connectivity change to IDLE
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:55 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to CONNECTING
+2023/11/26 23:42:55 INFO: [core] [Channel #1 SubChannel #2] Subchannel picks a new address "webui:9876" to connect
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:55 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {CONNECTING <nil>}
+2023-11-26T23:42:55Z[31m [ERRO][Config5g][GRPC] [0mConnectivity status idle, trying to connect again
+2023/11/26 23:42:55 INFO: [core] [Channel #1] Channel Connectivity change to CONNECTING
+2023/11/26 23:42:55 INFO: [core] [Channel #1 SubChannel #2] Subchannel Connectivity change to READY
+2023/11/26 23:42:55 INFO: [core] pickfirstBalancer: UpdateSubConnState: 0xc00079d010, {READY <nil>}
+2023/11/26 23:42:55 INFO: [core] [Channel #1] Channel Connectivity change to READY
+2023-11-26T23:42:55Z[36m [INFO][Config5g][GRPC] [0mconnectivity ready
+2023-11-26T23:42:55Z[36m [INFO][Config5g][GRPC] [0mstream msg recieved
+2023-11-26T23:42:55Z[36m [INFO][Config5g][GRPC] [0mFirst time config Received  RestartCounter:3060317653 NetworkSlice:{Name:"default" Nssai:{Sst:"1" Sd:"010203"} DeviceGroup:{Name:"5g-user-group1" IpDomainDetails:{Name:"pool1" DnnName:"internet" UePool:"172.250.1.0/16" DnsPrimary:"8.8.8.8" Mtu:1460 UeDnnQos:{DnnMbrUplink:20000000 DnnMbrDownlink:200000000 TrafficClass:{Name:"platinum" Qci:9 Arp:6 Pdb:300 Pelr:6}}} Imsi:"001010123456864" Imsi:"001010123456865" Imsi:"001010123456870"} Site:{SiteName:"enterprise" Gnb:{Name:"gnb1" Tac:1} Gnb:{Name:"gnb2" Tac:2} Plmn:{mcc:"001" mnc:"01"} Upf:{UpfName:"upf"}} AppFilters:{PccRuleBase:{FlowInfos:{FlowDesc:"permit out ip from any to assigned" TosTrafficClass:"IPV4" FlowDir:BIDIRECTIONAL FlowStatus:ENABLED} RuleId:"ALLOW-ALL" Qos:{Var5qi:9 Arp:{PL:6 PC:MAY_PREEMPT PV:PREEMPTABLE}} Priority:250}}} ConfigUpdated:1
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mReceived updateConfig in the amf app : RestartCounter:3060317653 NetworkSlice:{Name:"default" Nssai:{Sst:"1" Sd:"010203"} DeviceGroup:{Name:"5g-user-group1" IpDomainDetails:{Name:"pool1" DnnName:"internet" UePool:"172.250.1.0/16" DnsPrimary:"8.8.8.8" Mtu:1460 UeDnnQos:{DnnMbrUplink:20000000 DnnMbrDownlink:200000000 TrafficClass:{Name:"platinum" Qci:9 Arp:6 Pdb:300 Pelr:6}}} Imsi:"001010123456864" Imsi:"001010123456865" Imsi:"001010123456870"} Site:{SiteName:"enterprise" Gnb:{Name:"gnb1" Tac:1} Gnb:{Name:"gnb2" Tac:2} Plmn:{mcc:"001" mnc:"01"} Upf:{UpfName:"upf"}} AppFilters:{PccRuleBase:{FlowInfos:{FlowDesc:"permit out ip from any to assigned" TosTrafficClass:"IPV4" FlowDir:BIDIRECTIONAL FlowStatus:ENABLED} RuleId:"ALLOW-ALL" Qos:{Var5qi:9 Arp:{PL:6 PC:MAY_PREEMPT PV:PREEMPTABLE}} Priority:250}}} ConfigUpdated:1
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mNetwork Slice Name  default
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mNetwork Slice has site name:  enterprise
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mPlmn mcc  001
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mSupportedPlmnLIst: {{001 01} [{1 010203}]}, SupportGuamiLIst: {0xc000c03380 cafe00} received fromRoc
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mSupportedPlmnLIst: [{{001 01} [{1 010203}]}], SupportGuamiLIst: [{0xc000c03380 cafe00}] in AMF
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mTai list present in Slice {0xc00002eae0 1} []
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mTai list present in Slice {0xc00002eb00 2} [{0xc00002eae0 1}]
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mGnb Updated in existing Plmn, SupportTAILIst received from Roc:  [{0xc00002eae0 1} {0xc00002eb00 2}]
+2023-11-26T23:42:55Z[36m [INFO][AMF][GRPC] [0mSupportTAILIst in AMF [{0xc00002eae0 1} {0xc00002eb00 2}]
+2023-11-26T23:42:55Z[36m [INFO][AMF][Util] [0mamfconfig Info: Version[1.0.0] Description[AMF initial configuration]
+2023-11-26T23:42:55Z[36m [INFO][AMF][Init] [0mStarted KeepAlive Timer: 86400 sec
+2023-11-26T23:42:55Z[36m [INFO][AMF][CFG] [0mSent Register NF Instance with updated profile
+2023/11/26 23:42:55 chunk entry: []
+2023-11-26T23:42:57Z[36m [INFO][DRSM][App] [0mKeepalive insert d.podMaps map[amf-5887bbf6c5-gtqb6:0xc000284700]
+2023-11-26T23:43:16Z[36m [INFO][AMF][NGAP] [0mHandle SCTP Notification[addr: 128.84.155.135:20125]
+2023-11-26T23:43:16Z[33m [WARN][AMF][NGAP] [0mRAN context has been removed[addr: 128.84.155.135:20125]
+2023-11-26T23:43:16Z[36m [INFO][AMF][NGAP] [0mHandle SCTP Notification[addr: <nil>]
+2023-11-26T23:43:16Z[33m [WARN][AMF][NGAP] [0mRAN context has been removed[addr: <nil>]
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP] [0m[AMF] SCTP Accept from: 128.84.155.135:20125
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP] [0mCreate a new NG connection for: 128.84.155.135:20125
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mHandle NG Setup request
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mSupported Tai List in AMF Plmn: &{001 01}, Tac: 0x000001 Tac: 1
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mSupported Tai List in AMF Plmn: &{001 01}, Tac: 0x000002 Tac: 2
+2023-11-26T23:43:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mSend NG-Setup response
+2023-11-27T00:02:22Z[36m [INFO][AMF][NGAP] [0mHandle SCTP Notification[addr: <nil>]
+2023-11-27T00:02:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mSCTP_ASSOC_CHANGE notification
+2023-11-27T00:02:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mSCTP state is SCTP_COMM_LOST, close the connection
+2023-11-27T00:02:22Z[36m [INFO][AMF][NGAP][128.84.155.135:20125] [0mRemove RAN Context[ID: <PlmnID: {Mcc:001 Mnc:01}, GNbID: 000004>]
+2023-11-27T00:02:22Z[31m [ERRO][AMF][NGAP] [0mHandle connection[addr: <nil>] error: connection timed out
