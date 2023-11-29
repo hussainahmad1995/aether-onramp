@@ -13,7 +13,7 @@ k8s:
 
 core:
   standalone: "true"	# set to 'false' to place under control of ROC
-  data_iface: ens18
+  data_iface: eno1
   values_file: "deps/5gc/roles/core/templates/radio-5g-values.yaml"
   ran_subnet: ""	# empty string implies subnet comes from 'data_iface'
   helm:
@@ -23,7 +23,7 @@ core:
     ip_prefix: "192.168.252.0/24"
     iface: "access"
   amf:
-    ip: "10.76.28.113"
+    ip: "128.84.155.135"
 
 amp:
   roc_models: "deps/amp/roles/roc-load/templates/roc-5g-radio-models.json"
